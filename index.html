@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple labyrinth</title>
+	
+	<link rel="stylesheet" href="style.css" media="all">
+</head>
+<body>
+	<div id="labyrinth">
+		<input type="radio" name="s" id="s_w_7" hidden>
+
+		<!-- Horizontal lines -->
+		<div class="w l1 wf"></div>
+		<div class="w l2 c2 w1"></div>
+		<div class="w l2 c4 w4"></div>
+		<div class="w l3 c1 w1"></div>
+		<div class="w l3 c5 w5"></div>
+		<div class="w l4 c2 w3"></div>
+		<div class="w l4 c6 w2"></div>
+		<div class="w l5 c2 w5"></div>
+		<div class="w l6 c1 w1"></div>
+		<div class="w l7 c3 w5"></div>
+		<div class="w l8 c1 w1"></div>
+		<div class="w l9 c3 w4"></div>
+		<div class="w l9 c8 w1"></div>
+		<div class="w l10 c3 w3"></div>
+		<div class="w l11 c2 w4"></div>
+		<div class="w l12 c3 w4"></div>
+		<div class="w l13 wf"></div>
+
+		<!-- Vertical lines -->
+		<div class="w l1 h6"></div>
+		<div class="w l8 h5"></div>
+		<div class="w c2 l4 h1"></div>
+		<div class="w c2 l8 h1"></div>
+		<div class="w c2 l11 h2"></div>
+		<div class="w c3 l2 h2"></div>
+		<div class="w c3 l9 h1"></div>
+		<div class="w c4 l2 h1"></div>
+		<div class="w c5 l3 h1"></div>
+		<div class="w c6 l4 h1"></div>
+		<div class="w c7 l7 h4"></div>
+		<div class="w c8 l2 h1"></div>
+		<div class="w c8 l4 h3"></div>
+		<div class="w c8 l9 h4"></div>
+		<div class="w c9 l1 h1"></div>
+		<div class="w c9 l3 h5"></div>
+		<div class="w c9 l10 h3"></div>
+		<div class="w c10 l2 h9"></div>
+		<div class="w c11 l1 hf"></div>
+		
+		<!-- Logic part -->
+		
+
+		<input type="radio" name="s" id="s_1_1" hidden>
+		<input type="radio" name="s" id="s_1_2" hidden>
+		<input type="radio" name="s" id="s_1_3" hidden>
+		<input type="radio" name="s" id="s_1_4" hidden>
+		<input type="radio" name="s" id="s_1_5" hidden>
+		<input type="radio" name="s" id="s_1_6" hidden>
+		<input type="radio" name="s" id="s_1_7" hidden>
+		<input type="radio" name="s" id="s_1_8" hidden>
+		<input type="radio" name="s" id="s_1_9" hidden>
+		<input type="radio" name="s" id="s_1_10" hidden>
+		<input type="radio" name="s" id="s_1_11" hidden>
+		<input type="radio" name="s" id="s_1_12" hidden>
+
+		<input type="radio" name="s" id="s_2_1" hidden>
+		<input type="radio" name="s" id="s_2_2" hidden>
+		<input type="radio" name="s" id="s_2_3" hidden>
+		<input type="radio" name="s" id="s_2_4" hidden>
+		<input type="radio" name="s" id="s_2_5" hidden>
+		<input type="radio" name="s" id="s_2_6" hidden>
+		<input type="radio" name="s" id="s_2_7" hidden>
+		<input type="radio" name="s" id="s_2_8" hidden>
+		<input type="radio" name="s" id="s_2_9" hidden>
+		<input type="radio" name="s" id="s_2_10" hidden>
+		<input type="radio" name="s" id="s_2_11" hidden>
+		<input type="radio" name="s" id="s_2_12" hidden>
+
+		<input type="radio" name="s" id="s_3_1" hidden>
+		<input type="radio" name="s" id="s_3_2" hidden>
+		<input type="radio" name="s" id="s_3_3" hidden>
+		<input type="radio" name="s" id="s_3_4" hidden>
+		<input type="radio" name="s" id="s_3_5" hidden>
+		<input type="radio" name="s" id="s_3_6" hidden>
+		<input type="radio" name="s" id="s_3_7" hidden>
+		<input type="radio" name="s" id="s_3_8" hidden>
+		<input type="radio" name="s" id="s_3_9" hidden>
+		<input type="radio" name="s" id="s_3_10" hidden>
+		<input type="radio" name="s" id="s_3_11" hidden>
+		<input type="radio" name="s" id="s_3_12" hidden>
+
+		<input type="radio" name="s" id="s_4_1" hidden>
+		<input type="radio" name="s" id="s_4_2" hidden>
+		<input type="radio" name="s" id="s_4_3" hidden>
+		<input type="radio" name="s" id="s_4_4" hidden>
+		<input type="radio" name="s" id="s_4_5" hidden>
+		<input type="radio" name="s" id="s_4_6" hidden>
+		<input type="radio" name="s" id="s_4_7" hidden>
+		<input type="radio" name="s" id="s_4_8" hidden>
+		<input type="radio" name="s" id="s_4_9" hidden>
+		<input type="radio" name="s" id="s_4_10" hidden>
+		<input type="radio" name="s" id="s_4_11" hidden>
+		<input type="radio" name="s" id="s_4_12" hidden>
+
+		<input type="radio" name="s" id="s_5_1" hidden>
+		<input type="radio" name="s" id="s_5_2" hidden>
+		<input type="radio" name="s" id="s_5_3" hidden>
+		<input type="radio" name="s" id="s_5_4" hidden>
+		<input type="radio" name="s" id="s_5_5" hidden>
+		<input type="radio" name="s" id="s_5_6" hidden>
+		<input type="radio" name="s" id="s_5_7" hidden>
+		<input type="radio" name="s" id="s_5_8" hidden>
+		<input type="radio" name="s" id="s_5_9" hidden>
+		<input type="radio" name="s" id="s_5_10" hidden>
+		<input type="radio" name="s" id="s_5_11" hidden>
+		<input type="radio" name="s" id="s_5_12" hidden>
+
+		<input type="radio" name="s" id="s_6_1" hidden>
+		<input type="radio" name="s" id="s_6_2" hidden>
+		<input type="radio" name="s" id="s_6_3" hidden>
+		<input type="radio" name="s" id="s_6_4" hidden>
+		<input type="radio" name="s" id="s_6_5" hidden>
+		<input type="radio" name="s" id="s_6_6" hidden>
+		<input type="radio" name="s" id="s_6_7" hidden>
+		<input type="radio" name="s" id="s_6_8" hidden>
+		<input type="radio" name="s" id="s_6_9" hidden>
+		<input type="radio" name="s" id="s_6_10" hidden>
+		<input type="radio" name="s" id="s_6_11" hidden>
+		<input type="radio" name="s" id="s_6_12" hidden>
+
+		<input type="radio" name="s" id="s_7_1" hidden>
+		<input type="radio" name="s" id="s_7_2" hidden>
+		<input type="radio" name="s" id="s_7_3" hidden>
+		<input type="radio" name="s" id="s_7_4" hidden>
+		<input type="radio" name="s" id="s_7_5" hidden>
+		<input type="radio" name="s" id="s_7_6" hidden>
+		<input type="radio" name="s" id="s_7_7" hidden>
+		<input type="radio" name="s" id="s_7_8" hidden>
+		<input type="radio" name="s" id="s_7_9" hidden>
+		<input type="radio" name="s" id="s_7_10" hidden>
+		<input type="radio" name="s" id="s_7_11" hidden>
+		<input type="radio" name="s" id="s_7_12" hidden>
+
+		<input type="radio" name="s" id="s_8_1" hidden>
+		<input type="radio" name="s" id="s_8_2" hidden>
+		<input type="radio" name="s" id="s_8_3" hidden>
+		<input type="radio" name="s" id="s_8_4" hidden>
+		<input type="radio" name="s" id="s_8_5" hidden>
+		<input type="radio" name="s" id="s_8_6" hidden>
+		<input type="radio" name="s" id="s_8_7" hidden>
+		<input type="radio" name="s" id="s_8_8" hidden>
+		<input type="radio" name="s" id="s_8_9" hidden>
+		<input type="radio" name="s" id="s_8_10" hidden>
+		<input type="radio" name="s" id="s_8_11" hidden>
+		<input type="radio" name="s" id="s_8_12" hidden>
+
+		<input type="radio" name="s" id="s_9_1" hidden>
+		<input type="radio" name="s" id="s_9_2" hidden>
+		<input type="radio" name="s" id="s_9_3" checked hidden>
+		<input type="radio" name="s" id="s_9_4" hidden>
+		<input type="radio" name="s" id="s_9_5" hidden>
+		<input type="radio" name="s" id="s_9_6" hidden>
+		<input type="radio" name="s" id="s_9_7" hidden>
+		<input type="radio" name="s" id="s_9_8" hidden>
+		<input type="radio" name="s" id="s_9_9" hidden>
+		<input type="radio" name="s" id="s_9_10" hidden>
+		<input type="radio" name="s" id="s_9_11" hidden>
+		<input type="radio" name="s" id="s_9_12" hidden>
+
+		<input type="radio" name="s" id="s_10_1" hidden>
+		<input type="radio" name="s" id="s_10_2" hidden>
+		<input type="radio" name="s" id="s_10_3" hidden>
+		<input type="radio" name="s" id="s_10_4" hidden>
+		<input type="radio" name="s" id="s_10_5" hidden>
+		<input type="radio" name="s" id="s_10_6" hidden>
+		<input type="radio" name="s" id="s_10_7" hidden>
+		<input type="radio" name="s" id="s_10_8" hidden>
+		<input type="radio" name="s" id="s_10_9" hidden>
+		<input type="radio" name="s" id="s_10_10" hidden>
+		<input type="radio" name="s" id="s_10_11" hidden>
+		<input type="radio" name="s" id="s_10_12" hidden>
+
+		<!-- /*---============== Controls ==============---*/ -->
+
+		<!-- /*----------------- Line 1 -----------------*/ -->
+		<label rel="p-1-1" class="t" for="s_f"></label>
+		<label rel="p-1-1" class="l" for="s_f"></label>
+		<label rel="p-1-1" class="r" for="s_2_1"></label>
+		<label rel="p-1-1" class="b" for="s_1_2"></label>
+
+		<label rel="p-2-1" class="t" for="s_f"></label>
+		<label rel="p-2-1" class="l" for="s_1_1"></label>
+		<label rel="p-2-1" class="r" for="s_3_1"></label>
+		<label rel="p-2-1" class="b" for="s_f"></label>
+
+		<label rel="p-3-1" class="t" for="s_f"></label>
+		<label rel="p-3-1" class="l" for="s_2_1"></label>
+		<label rel="p-3-1" class="r" for="s_4_1"></label>
+		<label rel="p-3-1" class="b" for="s_3_2"></label>
+
+		<label rel="p-4-1" class="t" for="s_f"></label>
+		<label rel="p-4-1" class="l" for="s_3_1"></label>
+		<label rel="p-4-1" class="r" for="s_5_1"></label>
+		<label rel="p-4-1" class="b" for="s_f"></label>
+
+		<label rel="p-5-1" class="t" for="s_f"></label>
+		<label rel="p-5-1" class="l" for="s_4_1"></label>
+		<label rel="p-5-1" class="r" for="s_6_1"></label>
+		<label rel="p-5-1" class="b" for="s_f"></label>
+
+		<label rel="p-6-1" class="t" for="s_f"></label>
+		<label rel="p-6-1" class="l" for="s_5_1"></label>
+		<label rel="p-6-1" class="r" for="s_7_1"></label>
+		<label rel="p-6-1" class="b" for="s_f"></label>
+
+		<label rel="p-7-1" class="t" for="s_f"></label>
+		<label rel="p-7-1" class="l" for="s_6_1"></label>
+		<label rel="p-7-1" class="r" for="s_8_1"></label>
+		<label rel="p-7-1" class="b" for="s_f"></label>
+
+		<label rel="p-8-1" class="t" for="s_f"></label>
+		<label rel="p-8-1" class="l" for="s_7_1"></label>
+		<label rel="p-8-1" class="r" for="s_f"></label>
+		<label rel="p-8-1" class="b" for="s_8_2"></label>
+
+		<label rel="p-9-1" class="t" for="s_f"></label>
+		<label rel="p-9-1" class="l" for="s_f"></label>
+		<label rel="p-9-1" class="r" for="s_10_1"></label>
+		<label rel="p-9-1" class="b" for="s_9_2"></label>
+
+		<label rel="p-10-1" class="t" for="s_f"></label>
+		<label rel="p-10-1" class="l" for="s_9_1"></label>
+		<label rel="p-10-1" class="r" for="s_f"></label>
+		<label rel="p-10-1" class="b" for="s_10_2"></label>
+
+		<!-- /*----------------- Line 2 -----------------*/ -->
+		<label rel="p-1-2" class="t" for="s_1_1"></label>
+		<label rel="p-1-2" class="l" for="s_f"></label>
+		<label rel="p-1-2" class="r" for="s_2_2"></label>
+		<label rel="p-1-2" class="b" for="s_f"></label>
+
+		<label rel="p-2-2" class="t" for="s_f"></label>
+		<label rel="p-2-2" class="l" for="s_1_2"></label>
+		<label rel="p-2-2" class="r" for="s_f"></label>
+		<label rel="p-2-2" class="b" for="s_2_3"></label>
+
+		<label rel="p-3-2" class="t" for="s_3_1"></label>
+		<label rel="p-3-2" class="l" for="s_f"></label>
+		<label rel="p-3-2" class="r" for="s_f"></label>
+		<label rel="p-3-2" class="b" for="s_3_3"></label>
+
+		<label rel="p-4-2" class="t" for="s_f"></label>
+		<label rel="p-4-2" class="l" for="s_f"></label>
+		<label rel="p-4-2" class="r" for="s_5_2"></label>
+		<label rel="p-4-2" class="b" for="s_4_3"></label>
+
+		<label rel="p-5-2" class="t" for="s_f"></label>
+		<label rel="p-5-2" class="l" for="s_4_2"></label>
+		<label rel="p-5-2" class="r" for="s_6_2"></label>
+		<label rel="p-5-2" class="b" for="s_f"></label>
+
+		<label rel="p-6-2" class="t" for="s_f"></label>
+		<label rel="p-6-2" class="l" for="s_5_2"></label>
+		<label rel="p-6-2" class="r" for="s_7_2"></label>
+		<label rel="p-6-2" class="b" for="s_f"></label>
+
+		<label rel="p-7-2" class="t" for="s_f"></label>
+		<label rel="p-7-2" class="l" for="s_6_2"></label>
+		<label rel="p-7-2" class="r" for="s_f"></label>
+		<label rel="p-7-2" class="b" for="s_f"></label>
+
+		<label rel="p-8-2" class="t" for="s_8_1"></label>
+		<label rel="p-8-2" class="l" for="s_f"></label>
+		<label rel="p-8-2" class="r" for="s_9_2"></label>
+		<label rel="p-8-2" class="b" for="s_f"></label>
+
+		<label rel="p-9-2" class="t" for="s_9_1"></label>
+		<label rel="p-9-2" class="l" for="s_8_2"></label>
+		<label rel="p-9-2" class="r" for="s_f"></label>
+		<label rel="p-9-2" class="b" for="s_f"></label>
+
+		<label rel="p-10-2" class="t" for="s_10_1"></label>
+		<label rel="p-10-2" class="l" for="s_f"></label>
+		<label rel="p-10-2" class="r" for="s_f"></label>
+		<label rel="p-10-2" class="b" for="s_10_3"></label>
+
+		<!-- /*----------------- Line 3 -----------------*/ -->
+		<label rel="p-1-3" class="t" for="s_f"></label>
+		<label rel="p-1-3" class="l" for="s_f"></label>
+		<label rel="p-1-3" class="r" for="s_2_3"></label>
+		<label rel="p-1-3" class="b" for="s_1_4"></label>
+
+		<label rel="p-2-3" class="t" for="s_2_2"></label>
+		<label rel="p-2-3" class="l" for="s_1_3"></label>
+		<label rel="p-2-3" class="r" for="s_f"></label>
+		<label rel="p-2-3" class="b" for="s_f"></label>
+
+		<label rel="p-3-3" class="t" for="s_3_2"></label>
+		<label rel="p-3-3" class="l" for="s_f"></label>
+		<label rel="p-3-3" class="r" for="s_4_3"></label>
+		<label rel="p-3-3" class="b" for="s_f"></label>
+
+		<label rel="p-4-3" class="t" for="s_4_2"></label>
+		<label rel="p-4-3" class="l" for="s_3_3"></label>
+		<label rel="p-4-3" class="r" for="s_f"></label>
+		<label rel="p-4-3" class="b" for="s_f"></label>
+
+		<label rel="p-5-3" class="t" for="s_f"></label>
+		<label rel="p-5-3" class="l" for="s_f"></label>
+		<label rel="p-5-3" class="r" for="s_6_3"></label>
+		<label rel="p-5-3" class="b" for="s_5_4"></label>
+
+		<label rel="p-6-3" class="t" for="s_f"></label>
+		<label rel="p-6-3" class="l" for="s_5_3"></label>
+		<label rel="p-6-3" class="r" for="s_7_3"></label>
+		<label rel="p-6-3" class="b" for="s_f"></label>
+
+		<label rel="p-7-3" class="t" for="s_f"></label>
+		<label rel="p-7-3" class="l" for="s_6_3"></label>
+		<label rel="p-7-3" class="r" for="s_8_3"></label>
+		<label rel="p-7-3" class="b" for="s_f"></label>
+
+		<label rel="p-8-3" class="t" for="s_f"></label>
+		<label rel="p-8-3" class="l" for="s_7_3"></label>
+		<label rel="p-8-3" class="r" for="s_f"></label>
+		<label rel="p-8-3" class="b" for="s_8_4"></label>
+
+		<label rel="p-9-3" class="t" for="s_f"></label>
+		<label rel="p-9-3" class="l" for="s_f"></label>
+		<label rel="p-9-3" class="r" for="s_f"></label>
+		<label rel="p-9-3" class="b" for="s_9_4"></label>
+
+		<label rel="p-10-3" class="t" for="s_10_2"></label>
+		<label rel="p-10-3" class="l" for="s_f"></label>
+		<label rel="p-10-3" class="r" for="s_f"></label>
+		<label rel="p-10-3" class="b" for="s_10_4"></label>
+
+		<!-- /*----------------- Line 4 -----------------*/ -->
+		<label rel="p-1-4" class="t" for="s_1_3"></label>
+		<label rel="p-1-4" class="l" for="s_f"></label>
+		<label rel="p-1-4" class="r" for="s_f"></label>
+		<label rel="p-1-4" class="b" for="s_1_5"></label>
+
+		<label rel="p-2-4" class="t" for="s_f"></label>
+		<label rel="p-2-4" class="l" for="s_f"></label>
+		<label rel="p-2-4" class="r" for="s_3_4"></label>
+		<label rel="p-2-4" class="b" for="s_f"></label>
+
+		<label rel="p-3-4" class="t" for="s_f"></label>
+		<label rel="p-3-4" class="l" for="s_2_4"></label>
+		<label rel="p-3-4" class="r" for="s_4_4"></label>
+		<label rel="p-3-4" class="b" for="s_f"></label>
+
+		<label rel="p-4-4" class="t" for="s_f"></label>
+		<label rel="p-4-4" class="l" for="s_3_4"></label>
+		<label rel="p-4-4" class="r" for="s_5_4"></label>
+		<label rel="p-4-4" class="b" for="s_f"></label>
+
+		<label rel="p-5-4" class="t" for="s_5_3"></label>
+		<label rel="p-5-4" class="l" for="s_4_4"></label>
+		<label rel="p-5-4" class="r" for="s_f"></label>
+		<label rel="p-5-4" class="b" for="s_f"></label>
+
+		<label rel="p-6-4" class="t" for="s_f"></label>
+		<label rel="p-6-4" class="l" for="s_f"></label>
+		<label rel="p-6-4" class="r" for="s_7_4"></label>
+		<label rel="p-6-4" class="b" for="s_f"></label>
+
+		<label rel="p-7-4" class="t" for="s_f"></label>
+		<label rel="p-7-4" class="l" for="s_6_4"></label>
+		<label rel="p-7-4" class="r" for="s_f"></label>
+		<label rel="p-7-4" class="b" for="s_7_5"></label>
+
+		<label rel="p-8-4" class="t" for="s_8_3"></label>
+		<label rel="p-8-4" class="l" for="s_f"></label>
+		<label rel="p-8-4" class="r" for="s_f"></label>
+		<label rel="p-8-4" class="b" for="s_8_5"></label>
+
+		<label rel="p-9-4" class="t" for="s_9_3"></label>
+		<label rel="p-9-4" class="l" for="s_f"></label>
+		<label rel="p-9-4" class="r" for="s_f"></label>
+		<label rel="p-9-4" class="b" for="s_9_5"></label>
+
+		<label rel="p-10-4" class="t" for="s_10_3"></label>
+		<label rel="p-10-4" class="l" for="s_f"></label>
+		<label rel="p-10-4" class="r" for="s_f"></label>
+		<label rel="p-10-4" class="b" for="s_10_5"></label>
+
+		<!-- /*----------------- Line 5 -----------------*/ -->
+		<label rel="p-1-5" class="t" for="s_1_4"></label>
+		<label rel="p-1-5" class="l" for="s_f"></label>
+		<label rel="p-1-5" class="r" for="s_2_5"></label>
+		<label rel="p-1-5" class="b" for="s_f"></label>
+
+		<label rel="p-2-5" class="t" for="s_f"></label>
+		<label rel="p-2-5" class="l" for="s_1_5"></label>
+		<label rel="p-2-5" class="r" for="s_3_5"></label>
+		<label rel="p-2-5" class="b" for="s_2_6"></label>
+
+		<label rel="p-3-5" class="t" for="s_f"></label>
+		<label rel="p-3-5" class="l" for="s_2_5"></label>
+		<label rel="p-3-5" class="r" for="s_4_5"></label>
+		<label rel="p-3-5" class="b" for="s_3_6"></label>
+
+		<label rel="p-4-5" class="t" for="s_f"></label>
+		<label rel="p-4-5" class="l" for="s_3_5"></label>
+		<label rel="p-4-5" class="r" for="s_5_5"></label>
+		<label rel="p-4-5" class="b" for="s_4_6"></label>
+
+		<label rel="p-5-5" class="t" for="s_f"></label>
+		<label rel="p-5-5" class="l" for="s_4_5"></label>
+		<label rel="p-5-5" class="r" for="s_6_5"></label>
+		<label rel="p-5-5" class="b" for="s_5_6"></label>
+
+		<label rel="p-6-5" class="t" for="s_f"></label>
+		<label rel="p-6-5" class="l" for="s_5_5"></label>
+		<label rel="p-6-5" class="r" for="s_7_5"></label>
+		<label rel="p-6-5" class="b" for="s_6_6"></label>
+
+		<label rel="p-7-5" class="t" for="s_7_4"></label>
+		<label rel="p-7-5" class="l" for="s_6_5"></label>
+		<label rel="p-7-5" class="r" for="s_f"></label>
+		<label rel="p-7-5" class="b" for="s_7_6"></label>
+
+		<label rel="p-8-5" class="t" for="s_8_4"></label>
+		<label rel="p-8-5" class="l" for="s_f"></label>
+		<label rel="p-8-5" class="r" for="s_f"></label>
+		<label rel="p-8-5" class="b" for="s_8_6"></label>
+
+		<label rel="p-9-5" class="t" for="s_9_4"></label>
+		<label rel="p-9-5" class="l" for="s_f"></label>
+		<label rel="p-9-5" class="r" for="s_f"></label>
+		<label rel="p-9-5" class="b" for="s_9_6"></label>
+
+		<label rel="p-10-5" class="t" for="s_10_4"></label>
+		<label rel="p-10-5" class="l" for="s_f"></label>
+		<label rel="p-10-5" class="r" for="s_f"></label>
+		<label rel="p-10-5" class="b" for="s_10_6"></label>
+
+		<!-- /*----------------- Line 6 -----------------*/ -->
+		<label rel="p-1-6" class="t" for="s_f"></label>
+		<label rel="p-1-6" class="l" for="s_f"></label>
+		<label rel="p-1-6" class="r" for="s_2_6"></label>
+		<label rel="p-1-6" class="b" for="s_1_7"></label>
+
+		<label rel="p-2-6" class="t" for="s_2_5"></label>
+		<label rel="p-2-6" class="l" for="s_1_6"></label>
+		<label rel="p-2-6" class="r" for="s_3_6"></label>
+		<label rel="p-2-6" class="b" for="s_2_7"></label>
+
+		<label rel="p-3-6" class="t" for="s_3_5"></label>
+		<label rel="p-3-6" class="l" for="s_2_6"></label>
+		<label rel="p-3-6" class="r" for="s_4_6"></label>
+		<label rel="p-3-6" class="b" for="s_f"></label>
+
+		<label rel="p-4-6" class="t" for="s_4_5"></label>
+		<label rel="p-4-6" class="l" for="s_3_6"></label>
+		<label rel="p-4-6" class="r" for="s_5_6"></label>
+		<label rel="p-4-6" class="b" for="s_f"></label>
+
+		<label rel="p-5-6" class="t" for="s_5_5"></label>
+		<label rel="p-5-6" class="l" for="s_4_6"></label>
+		<label rel="p-5-6" class="r" for="s_6_6"></label>
+		<label rel="p-5-6" class="b" for="s_f"></label>
+
+		<label rel="p-6-6" class="t" for="s_6_5"></label>
+		<label rel="p-6-6" class="l" for="s_5_6"></label>
+		<label rel="p-6-6" class="r" for="s_7_6"></label>
+		<label rel="p-6-6" class="b" for="s_f"></label>
+
+		<label rel="p-7-6" class="t" for="s_7_5"></label>
+		<label rel="p-7-6" class="l" for="s_6_6"></label>
+		<label rel="p-7-6" class="r" for="s_f"></label>
+		<label rel="p-7-6" class="b" for="s_f"></label>
+
+		<label rel="p-8-6" class="t" for="s_8_5"></label>
+		<label rel="p-8-6" class="l" for="s_f"></label>
+		<label rel="p-8-6" class="r" for="s_f"></label>
+		<label rel="p-8-6" class="b" for="s_8_7"></label>
+
+		<label rel="p-9-6" class="t" for="s_9_5"></label>
+		<label rel="p-9-6" class="l" for="s_f"></label>
+		<label rel="p-9-6" class="r" for="s_f"></label>
+		<label rel="p-9-6" class="b" for="s_9_7"></label>
+
+		<label rel="p-10-6" class="t" for="s_10_5"></label>
+		<label rel="p-10-6" class="l" for="s_f"></label>
+		<label rel="p-10-6" class="r" for="s_f"></label>
+		<label rel="p-10-6" class="b" for="s_10_7"></label>
+
+		<!-- /*----------------- Line 7 -----------------*/ -->
+		<label rel="p-1-7" class="t" for="s_1_6"></label>
+		<label rel="p-1-7" class="l" for="s_w_7"></label>
+		<label rel="p-1-7" class="r" for="s_2_7"></label>
+		<label rel="p-1-7" class="b" for="s_f"></label>
+
+		<label rel="p-2-7" class="t" for="s_2_6"></label>
+		<label rel="p-2-7" class="l" for="s_1_7"></label>
+		<label rel="p-2-7" class="r" for="s_3_7"></label>
+		<label rel="p-2-7" class="b" for="s_2_8"></label>
+
+		<label rel="p-3-7" class="t" for="s_f"></label>
+		<label rel="p-3-7" class="l" for="s_2_7"></label>
+		<label rel="p-3-7" class="r" for="s_4_7"></label>
+		<label rel="p-3-7" class="b" for="s_3_8"></label>
+
+		<label rel="p-4-7" class="t" for="s_f"></label>
+		<label rel="p-4-7" class="l" for="s_3_7"></label>
+		<label rel="p-4-7" class="r" for="s_5_7"></label>
+		<label rel="p-4-7" class="b" for="s_4_8"></label>
+
+		<label rel="p-5-7" class="t" for="s_f"></label>
+		<label rel="p-5-7" class="l" for="s_4_7"></label>
+		<label rel="p-5-7" class="r" for="s_6_7"></label>
+		<label rel="p-5-7" class="b" for="s_5_8"></label>
+
+		<label rel="p-6-7" class="t" for="s_f"></label>
+		<label rel="p-6-7" class="l" for="s_5_7"></label>
+		<label rel="p-6-7" class="r" for="s_f"></label>
+		<label rel="p-6-7" class="b" for="s_6_8"></label>
+
+		<label rel="p-7-7" class="t" for="s_f"></label>
+		<label rel="p-7-7" class="l" for="s_f"></label>
+		<label rel="p-7-7" class="r" for="s_8_7"></label>
+		<label rel="p-7-7" class="b" for="s_7_8"></label>
+
+		<label rel="p-8-7" class="t" for="s_8_6"></label>
+		<label rel="p-8-7" class="l" for="s_7_7"></label>
+		<label rel="p-8-7" class="r" for="s_f"></label>
+		<label rel="p-8-7" class="b" for="s_8_8"></label>
+
+		<label rel="p-9-7" class="t" for="s_9_6"></label>
+		<label rel="p-9-7" class="l" for="s_f"></label>
+		<label rel="p-9-7" class="r" for="s_f"></label>
+		<label rel="p-9-7" class="b" for="s_9_8"></label>
+
+		<label rel="p-10-7" class="t" for="s_10_6"></label>
+		<label rel="p-10-7" class="l" for="s_f"></label>
+		<label rel="p-10-7" class="r" for="s_f"></label>
+		<label rel="p-10-7" class="b" for="s_10_8"></label>
+
+		<!-- /*----------------- Line 8 -----------------*/ -->
+		<label rel="p-1-8" class="t" for="s_f"></label>
+		<label rel="p-1-8" class="l" for="s_f"></label>
+		<label rel="p-1-8" class="r" for="s_f"></label>
+		<label rel="p-1-8" class="b" for="s_1_9"></label>
+
+		<label rel="p-2-8" class="t" for="s_2_7"></label>
+		<label rel="p-2-8" class="l" for="s_f"></label>
+		<label rel="p-2-8" class="r" for="s_3_8"></label>
+		<label rel="p-2-8" class="b" for="s_2_9"></label>
+
+		<label rel="p-3-8" class="t" for="s_3_7"></label>
+		<label rel="p-3-8" class="l" for="s_2_8"></label>
+		<label rel="p-3-8" class="r" for="s_4_8"></label>
+		<label rel="p-3-8" class="b" for="s_f"></label>
+
+		<label rel="p-4-8" class="t" for="s_4_7"></label>
+		<label rel="p-4-8" class="l" for="s_3_8"></label>
+		<label rel="p-4-8" class="r" for="s_5_8"></label>
+		<label rel="p-4-8" class="b" for="s_f"></label>
+
+		<label rel="p-5-8" class="t" for="s_5_7"></label>
+		<label rel="p-5-8" class="l" for="s_4_8"></label>
+		<label rel="p-5-8" class="r" for="s_6_8"></label>
+		<label rel="p-5-8" class="b" for="s_f"></label>
+
+		<label rel="p-6-8" class="t" for="s_6_7"></label>
+		<label rel="p-6-8" class="l" for="s_5_8"></label>
+		<label rel="p-6-8" class="r" for="s_f"></label>
+		<label rel="p-6-8" class="b" for="s_f"></label>
+
+		<label rel="p-7-8" class="t" for="s_7_7"></label>
+		<label rel="p-7-8" class="l" for="s_f"></label>
+		<label rel="p-7-8" class="r" for="s_8_8"></label>
+		<label rel="p-7-8" class="b" for="s_7_9"></label>
+
+		<label rel="p-8-8" class="t" for="s_8_7"></label>
+		<label rel="p-8-8" class="l" for="s_7_8"></label>
+		<label rel="p-8-8" class="r" for="s_9_8"></label>
+		<label rel="p-8-8" class="b" for="s_f"></label>
+
+		<label rel="p-9-8" class="t" for="s_9_7"></label>
+		<label rel="p-9-8" class="l" for="s_8_8"></label>
+		<label rel="p-9-8" class="r" for="s_f"></label>
+		<label rel="p-9-8" class="b" for="s_9_9"></label>
+
+		<label rel="p-10-8" class="t" for="s_10_7"></label>
+		<label rel="p-10-8" class="l" for="s_f"></label>
+		<label rel="p-10-8" class="r" for="s_f"></label>
+		<label rel="p-10-8" class="b" for="s_10_9"></label>
+
+		<!-- /*----------------- Line 9 -----------------*/ -->
+		<label rel="p-1-9" class="t" for="s_1_8"></label>
+		<label rel="p-1-9" class="l" for="s_f"></label>
+		<label rel="p-1-9" class="r" for="s_2_9"></label>
+		<label rel="p-1-9" class="b" for="s_1_10"></label>
+
+		<label rel="p-2-9" class="t" for="s_2_8"></label>
+		<label rel="p-2-9" class="l" for="s_1_9"></label>
+		<label rel="p-2-9" class="r" for="s_f"></label>
+		<label rel="p-2-9" class="b" for="s_2_10"></label>
+
+		<label rel="p-3-9" class="t" for="s_f"></label>
+		<label rel="p-3-9" class="l" for="s_f"></label>
+		<label rel="p-3-9" class="r" for="s_4_9"></label>
+		<label rel="p-3-9" class="b" for="s_f"></label>
+
+		<label rel="p-4-9" class="t" for="s_f"></label>
+		<label rel="p-4-9" class="l" for="s_3_9"></label>
+		<label rel="p-4-9" class="r" for="s_5_9"></label>
+		<label rel="p-4-9" class="b" for="s_f"></label>
+
+		<label rel="p-5-9" class="t" for="s_f"></label>
+		<label rel="p-5-9" class="l" for="s_4_9"></label>
+		<label rel="p-5-9" class="r" for="s_6_9"></label>
+		<label rel="p-5-9" class="b" for="s_f"></label>
+
+		<label rel="p-6-9" class="t" for="s_f"></label>
+		<label rel="p-6-9" class="l" for="s_5_9"></label>
+		<label rel="p-6-9" class="r" for="s_f"></label>
+		<label rel="p-6-9" class="b" for="s_6_10"></label>
+
+		<label rel="p-7-9" class="t" for="s_7_8"></label>
+		<label rel="p-7-9" class="l" for="s_f"></label>
+		<label rel="p-7-9" class="r" for="s_f"></label>
+		<label rel="p-7-9" class="b" for="s_7_10"></label>
+
+		<label rel="p-8-9" class="t" for="s_f"></label>
+		<label rel="p-8-9" class="l" for="s_f"></label>
+		<label rel="p-8-9" class="r" for="s_9_9"></label>
+		<label rel="p-8-9" class="b" for="s_8_10"></label>
+
+		<label rel="p-9-9" class="t" for="s_9_8"></label>
+		<label rel="p-9-9" class="l" for="s_8_9"></label>
+		<label rel="p-9-9" class="r" for="s_f"></label>
+		<label rel="p-9-9" class="b" for="s_9_10"></label>
+
+		<label rel="p-10-9" class="t" for="s_10_8"></label>
+		<label rel="p-10-9" class="l" for="s_f"></label>
+		<label rel="p-10-9" class="r" for="s_f"></label>
+		<label rel="p-10-9" class="b" for="s_10_10"></label>
+
+		<!-- /*----------------- Line 10 -----------------*/ -->
+		<label rel="p-1-10" class="t" for="s_1_9"></label>
+		<label rel="p-1-10" class="l" for="s_f"></label>
+		<label rel="p-1-10" class="r" for="s_2_10"></label>
+		<label rel="p-1-10" class="b" for="s_1_11"></label>
+
+		<label rel="p-2-10" class="t" for="s_2_9"></label>
+		<label rel="p-2-10" class="l" for="s_1_10"></label>
+		<label rel="p-2-10" class="r" for="s_3_10"></label>
+		<label rel="p-2-10" class="b" for="s_f"></label>
+
+		<label rel="p-3-10" class="t" for="s_f"></label>
+		<label rel="p-3-10" class="l" for="s_2_10"></label>
+		<label rel="p-3-10" class="r" for="s_4_10"></label>
+		<label rel="p-3-10" class="b" for="s_f"></label>
+
+		<label rel="p-4-10" class="t" for="s_f"></label>
+		<label rel="p-4-10" class="l" for="s_3_10"></label>
+		<label rel="p-4-10" class="r" for="s_5_10"></label>
+		<label rel="p-4-10" class="b" for="s_f"></label>
+
+		<label rel="p-5-10" class="t" for="s_f"></label>
+		<label rel="p-5-10" class="l" for="s_4_10"></label>
+		<label rel="p-5-10" class="r" for="s_6_10"></label>
+		<label rel="p-5-10" class="b" for="s_f"></label>
+
+		<label rel="p-6-10" class="t" for="s_6_9"></label>
+		<label rel="p-6-10" class="l" for="s_5_10"></label>
+		<label rel="p-6-10" class="r" for="s_f"></label>
+		<label rel="p-6-10" class="b" for="s_6_11"></label>
+
+		<label rel="p-7-10" class="t" for="s_7_9"></label>
+		<label rel="p-7-10" class="l" for="s_f"></label>
+		<label rel="p-7-10" class="r" for="s_f"></label>
+		<label rel="p-7-10" class="b" for="s_7_11"></label>
+
+		<label rel="p-8-10" class="t" for="s_8_9"></label>
+		<label rel="p-8-10" class="l" for="s_f"></label>
+		<label rel="p-8-10" class="r" for="s_f"></label>
+		<label rel="p-8-10" class="b" for="s_8_11"></label>
+
+		<label rel="p-9-10" class="t" for="s_9_9"></label>
+		<label rel="p-9-10" class="l" for="s_f"></label>
+		<label rel="p-9-10" class="r" for="s_f"></label>
+		<label rel="p-9-10" class="b" for="s_9_11"></label>
+
+		<label rel="p-10-10" class="t" for="s_10_9"></label>
+		<label rel="p-10-10" class="l" for="s_f"></label>
+		<label rel="p-10-10" class="r" for="s_f"></label>
+		<label rel="p-10-10" class="b" for="s_10_11"></label>
+
+		<!-- /*----------------- Line 11 -----------------*/ -->
+		<label rel="p-1-11" class="t" for="s_1_10"></label>
+		<label rel="p-1-11" class="l" for="s_f"></label>
+		<label rel="p-1-11" class="r" for="s_f"></label>
+		<label rel="p-1-11" class="b" for="s_1_12"></label>
+
+		<label rel="p-2-11" class="t" for="s_f"></label>
+		<label rel="p-2-11" class="l" for="s_f"></label>
+		<label rel="p-2-11" class="r" for="s_3_11"></label>
+		<label rel="p-2-11" class="b" for="s_2_12"></label>
+
+		<label rel="p-3-11" class="t" for="s_f"></label>
+		<label rel="p-3-11" class="l" for="s_2_11"></label>
+		<label rel="p-3-11" class="r" for="s_4_11"></label>
+		<label rel="p-3-11" class="b" for="s_f"></label>
+
+		<label rel="p-4-11" class="t" for="s_f"></label>
+		<label rel="p-4-11" class="l" for="s_3_11"></label>
+		<label rel="p-4-11" class="r" for="s_5_11"></label>
+		<label rel="p-4-11" class="b" for="s_f"></label>
+
+		<label rel="p-5-11" class="t" for="s_f"></label>
+		<label rel="p-5-11" class="l" for="s_4_11"></label>
+		<label rel="p-5-11" class="r" for="s_6_11"></label>
+		<label rel="p-5-11" class="b" for="s_f"></label>
+
+		<label rel="p-6-11" class="t" for="s_6_10"></label>
+		<label rel="p-6-11" class="l" for="s_5_11"></label>
+		<label rel="p-6-11" class="r" for="s_7_11"></label>
+		<label rel="p-6-11" class="b" for="s_f"></label>
+
+		<label rel="p-7-11" class="t" for="s_7_10"></label>
+		<label rel="p-7-11" class="l" for="s_6_11"></label>
+		<label rel="p-7-11" class="r" for="s_f"></label>
+		<label rel="p-7-11" class="b" for="s_7_12"></label>
+
+		<label rel="p-8-11" class="t" for="s_8_10"></label>
+		<label rel="p-8-11" class="l" for="s_f"></label>
+		<label rel="p-8-11" class="r" for="s_f"></label>
+		<label rel="p-8-11" class="b" for="s_8_12"></label>
+
+		<label rel="p-9-11" class="t" for="s_9_10"></label>
+		<label rel="p-9-11" class="l" for="s_f"></label>
+		<label rel="p-9-11" class="r" for="s_10_11"></label>
+		<label rel="p-9-11" class="b" for="s_9_12"></label>
+
+		<label rel="p-10-11" class="t" for="s_10_10"></label>
+		<label rel="p-10-11" class="l" for="s_9_11"></label>
+		<label rel="p-10-11" class="r" for="s_f"></label>
+		<label rel="p-10-11" class="b" for="s_10_12"></label>
+
+		<!-- /*----------------- Line 12 -----------------*/ -->
+		<label rel="p-1-12" class="t" for="s_1_11"></label>
+		<label rel="p-1-12" class="l" for="s_f"></label>
+		<label rel="p-1-12" class="r" for="s_f"></label>
+		<label rel="p-1-12" class="b" for="s_f"></label>
+
+		<label rel="p-2-12" class="t" for="s_2_11"></label>
+		<label rel="p-2-12" class="l" for="s_f"></label>
+		<label rel="p-2-12" class="r" for="s_3_12"></label>
+		<label rel="p-2-12" class="b" for="s_f"></label>
+
+		<label rel="p-3-12" class="t" for="s_f"></label>
+		<label rel="p-3-12" class="l" for="s_2_12"></label>
+		<label rel="p-3-12" class="r" for="s_4_12"></label>
+		<label rel="p-3-12" class="b" for="s_f"></label>
+
+		<label rel="p-4-12" class="t" for="s_f"></label>
+		<label rel="p-4-12" class="l" for="s_3_12"></label>
+		<label rel="p-4-12" class="r" for="s_5_12"></label>
+		<label rel="p-4-12" class="b" for="s_f"></label>
+
+		<label rel="p-5-12" class="t" for="s_f"></label>
+		<label rel="p-5-12" class="l" for="s_4_12"></label>
+		<label rel="p-5-12" class="r" for="s_6_12"></label>
+		<label rel="p-5-12" class="b" for="s_f"></label>
+
+		<label rel="p-6-12" class="t" for="s_f"></label>
+		<label rel="p-6-12" class="l" for="s_5_12"></label>
+		<label rel="p-6-12" class="r" for="s_7_12"></label>
+		<label rel="p-6-12" class="b" for="s_f"></label>
+
+		<label rel="p-7-12" class="t" for="s_7_11"></label>
+		<label rel="p-7-12" class="l" for="s_6_12"></label>
+		<label rel="p-7-12" class="r" for="s_f"></label>
+		<label rel="p-7-12" class="b" for="s_f"></label>
+
+		<label rel="p-8-12" class="t" for="s_8_11"></label>
+		<label rel="p-8-12" class="l" for="s_f"></label>
+		<label rel="p-8-12" class="r" for="s_f"></label>
+		<label rel="p-8-12" class="b" for="s_f"></label>
+
+		<label rel="p-9-12" class="t" for="s_9_11"></label>
+		<label rel="p-9-12" class="l" for="s_f"></label>
+		<label rel="p-9-12" class="r" for="s_10_12"></label>
+		<label rel="p-9-12" class="b" for="s_f"></label>
+
+		<label rel="p-10-12" class="t" for="s_10_11"></label>
+		<label rel="p-10-12" class="l" for="s_9_12"></label>
+		<label rel="p-10-12" class="r" for="s_f"></label>
+		<label rel="p-10-12" class="b" for="s_f"></label>
+		
+		<div id="boy"></div>
+
+		<div id="congratulation">Congratulation, you won!</div>
+	</div>
+</body>
+</html>
